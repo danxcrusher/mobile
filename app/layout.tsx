@@ -4,6 +4,7 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 import { SuiProviders } from '@/components/sui-providers'
+import { Providers } from './providers'
 
 export const metadata: Metadata = {
   title: 'SUI Wallet App',
@@ -28,6 +29,9 @@ html {
         `}</style>
       </head>
       <body>
+        <Providers>
+          <SuiProviders>{children}</SuiProviders>
+        </Providers>
         <SuiProviders>
           {children}
         </SuiProviders>
